@@ -39,4 +39,4 @@ void part_eight_jobs_builtin(void);
 /* Shutdown job system (free resources) */
 void part_eight_shutdown(void);
 
-#endif /* PART_EIGHT_H */
+#endif
