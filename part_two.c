@@ -1,5 +1,5 @@
 //******************************************************************************************************
-//* Name:        expand_env.c                                                                          *
+//* Name:        expand_env                                                                            *
 //* Description: Environment-variable expansion utilities for COP4610 Project 1 shell.                 *
 //*              Provides two APIs:                                                                    *
 //*                - expand_env_vars_dup(char **argv): non-destructive, returns newly                  *
