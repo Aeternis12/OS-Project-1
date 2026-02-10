@@ -124,52 +124,52 @@ int expand_env_vars_inplace(char **argv) {
     return 0;
 }
 
-#ifdef DEMO_MAIN
-/* Demo main for local testing.
- * To build demo: gcc -std=c11 -Wall -Wextra -O2 -DDEMO_MAIN -o expand_env_demo expand_env.c
- */
-int main(void) {
-    // Example input (simulate tokenizer output)
-    char *tokens[] = {
-        strdup("echo"),
-        strdup("$USER"),
-        strdup("literal"),
-        strdup("$UNSET_VAR"), /* assume it's not set */
-        strdup("$1BAD"),      /* invalid name (starts with digit) */
-        NULL
-    };
-
-    printf("Original tokens:\n");
-    for (size_t i = 0; tokens[i] != NULL; ++i) {
-        printf("  [%zu] \"%s\"\n", i, tokens[i]);
-    }
-
-    // Non-destructive expansion
-    char **expanded = expand_env_vars_dup(tokens);
-    if (!expanded) {
-        fprintf(stderr, "expand_env_vars_dup failed\n");
-        free_argv(tokens);
-        return 1;
-    }
-    printf("\nExpanded (dup) tokens:\n");
-    for (size_t i = 0; expanded[i] != NULL; ++i) {
-        printf("  [%zu] \"%s\"\n", i, expanded[i]);
-    }
-
-    // Destructive expansion (in-place) - works because we used strdup for tokens
-    if (expand_env_vars_inplace(tokens) != 0) {
-        fprintf(stderr, "expand_env_vars_inplace failed\n");
-    } else {
-        printf("\nExpanded (inplace) tokens:\n");
-        for (size_t i = 0; tokens[i] != NULL; ++i) {
-            printf("  [%zu] \"%s\"\n", i, tokens[i]);
-        }
-    }
-
-    // Cleanup
-    free_argv(expanded);
-    free_argv(tokens);
-
-    return 0;
-}
-#endif
+//#ifdef DEMO_MAIN
+///* Demo main for local testing.
+// * To build demo: gcc -std=c11 -Wall -Wextra -O2 -DDEMO_MAIN -o expand_env_demo expand_env.c
+// */
+//int main(void) {
+//    // Example input (simulate tokenizer output)
+//    char *tokens[] = {
+//        strdup("echo"),
+//        strdup("$USER"),
+//        strdup("literal"),
+//        strdup("$UNSET_VAR"), /* assume it's not set */
+//        strdup("$1BAD"),      /* invalid name (starts with digit) */
+//        NULL
+//    };
+//
+//    printf("Original tokens:\n");
+//    for (size_t i = 0; tokens[i] != NULL; ++i) {
+//        printf("  [%zu] \"%s\"\n", i, tokens[i]);
+//    }
+//
+//    // Non-destructive expansion
+//    char **expanded = expand_env_vars_dup(tokens);
+//    if (!expanded) {
+//        fprintf(stderr, "expand_env_vars_dup failed\n");
+//        free_argv(tokens);
+//        return 1;
+//    }
+//    printf("\nExpanded (dup) tokens:\n");
+//    for (size_t i = 0; expanded[i] != NULL; ++i) {
+//        printf("  [%zu] \"%s\"\n", i, expanded[i]);
+//    }
+//
+//    // Destructive expansion (in-place) - works because we used strdup for tokens
+//    if (expand_env_vars_inplace(tokens) != 0) {
+//        fprintf(stderr, "expand_env_vars_inplace failed\n");
+//    } else {
+//        printf("\nExpanded (inplace) tokens:\n");
+//        for (size_t i = 0; tokens[i] != NULL; ++i) {
+//            printf("  [%zu] \"%s\"\n", i, tokens[i]);
+//        }
+//    }
+//
+//    // Cleanup
+//    free_argv(expanded);
+//    free_argv(tokens);
+//
+//    return 0;
+//}
+//#endif

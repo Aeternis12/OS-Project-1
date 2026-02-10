@@ -82,39 +82,39 @@ void handle_io_redirection(char **args) {
     args[j] = NULL;
 }
 
-int main() {
-    printf("--- Part 6 Test ---\n");
-    printf("Command: ls -l > test_output.txt\n");
-
-    // hardcoded args to simulate the parser output
-    // using /bin/ls directly so we don't need path search
-    char *args[] = { "/bin/ls", "-l", ">", "test_output.txt", NULL };
-
-    pid_t pid = fork();
-
-    if (pid == -1) {
-        perror("fork failed");
-        return 1;
-    } 
-    else if (pid == 0) {
-        // child process
-        
-        // do the redirection logic
-        handle_io_redirection(args);
-
-        // run the command
-        execv(args[0], args);
-        
-        // if we get here, execv failed
-        perror("execv failed");
-        exit(1);
-    } 
-    else {
-        // parent process
-        wait(NULL);
-        printf("--- Finished ---\n");
-        printf("Check test_output.txt to see if it worked.\n");
-    }
-
-    return 0;
-}
+//int main() {
+//    printf("--- Part 6 Test ---\n");
+//    printf("Command: ls -l > test_output.txt\n");
+//
+//    // hardcoded args to simulate the parser output
+//    // using /bin/ls directly so we don't need path search
+//    char *args[] = { "/bin/ls", "-l", ">", "test_output.txt", NULL };
+//
+//    pid_t pid = fork();
+//
+//    if (pid == -1) {
+//        perror("fork failed");
+//        return 1;
+//    } 
+//    else if (pid == 0) {
+//        // child process
+//        
+//        // do the redirection logic
+//        handle_io_redirection(args);
+//
+//        // run the command
+//        execv(args[0], args);
+//        
+//        // if we get here, execv failed
+//        perror("execv failed");
+//        exit(1);
+//    } 
+//    else {
+//        // parent process
+//        wait(NULL);
+//        printf("--- Finished ---\n");
+//        printf("Check test_output.txt to see if it worked.\n");
+//    }
+//
+//    return 0;
+//}
