@@ -13,7 +13,7 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
-### Part 2: [Description]
+### Part 2: Environment Variables
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
@@ -25,7 +25,7 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
-### Part 5: [Description]
+### Part 5: External Command Execution
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
@@ -37,7 +37,7 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
-### Part 8: [Description]
+### Part 8: Background Processing
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
