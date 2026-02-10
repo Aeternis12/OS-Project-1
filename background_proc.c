@@ -1,32 +1,32 @@
-//*****************************************************************************************************
-//* Name:        background_proc                                                                      *
-//* Description: Part 8 - Background Processing & Job Bookkeeping implementation                      *
-//*              Maintains job table and provides APIs:                                               *
-//*                - part_eight_init()            : initialize job system                             *
-//*                - part_eight_add_job(...)      : register a new background job and print start msg *
-//*                - part_eight_check_jobs()      : poll/reap finished background children and print  *
-//*                                              completion messages                                  *
-//*                - part_eight_jobs_builtin()    : builtin to list active background jobs            *
-//*                - part_eight_shutdown()        : cleanup resources                                 *
-//*              Behavior:                                                                            *
-//*                - Tracks up to MAX_ACTIVE_JOBS concurrently (default 10).                          *
-//*                - Job numbers are monotonic and never reused.                                      *
-//*                - Supports jobs consisting of up to 3 processes (2 pipes => 3 procs).              *
-//*                - Prints start message: [jobno] leader_pid                                         *
-//*                - Prints completion message: [jobno]  + done <cmdline>                             *
-//* Author: Katelyna Pastrana                                                                         *
-//* Date:        2026-02-07                                                                           *
-//* References:                                                                                       *
-//*    - COP4610 Project 1 specification (Part 8)                                                     *
-//*    - POSIX: fork(2), waitpid(2)                                                                   *
-//*    - Stephen Brennan, "Write a Shell in C" (design notes)                                         *
-//*    - CodeVault YouTube videos                                                                     *
-//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o part_eight part_eight.c  *
-//*****************************************************************************************************
+//***************************************************************************************************************
+//* Name:        background_proc.c                                                                              *
+//* Description: Part 8 - Background Processing & Job Bookkeeping implementation                                *
+//*              Maintains job table and provides APIs:                                                         *
+//*                - part_eight_init()            : initialize job system                                       *
+//*                - part_eight_add_job(...)      : register a new background job and print start msg           *
+//*                - part_eight_check_jobs()      : poll/reap finished background children and print            *
+//*                                              completion messages                                            *
+//*                - part_eight_jobs_builtin()    : builtin to list active background jobs                      *
+//*                - part_eight_shutdown()        : cleanup resources                                           *
+//*              Behavior:                                                                                      *
+//*                - Tracks up to MAX_ACTIVE_JOBS concurrently (default 10).                                    *
+//*                - Job numbers are monotonic and never reused.                                                *
+//*                - Supports jobs consisting of up to 3 processes (2 pipes => 3 procs).                        *
+//*                - Prints start message: [jobno] leader_pid                                                   *
+//*                - Prints completion message: [jobno]  + done <cmdline>                                       *
+//* Author: Katelyna Pastrana                                                                                   *
+//* Date:        2026-02-07                                                                                     *
+//* References:                                                                                                 *
+//*    - COP4610 Project 1 specification (Part 8)                                                               *
+//*    - POSIX: fork(2), waitpid(2)                                                                             *
+//*    - Stephen Brennan, "Write a Shell in C" (design notes)                                                   *
+//*    - CodeVault YouTube videos                                                                               *
+//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o background_proc background_proc.c  *
+//***************************************************************************************************************
 
 #define _POSIX_C_SOURCE 200809L
 
-#include "part_eight.h"
+#include "background_proc.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
