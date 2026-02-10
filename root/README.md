@@ -45,21 +45,33 @@ Building a shell from scratch
 - **Assigned to**: Landon Martin
 
 ### Extra Credit
-- **Responsibilities**: Writting each project in a different programing language.
-- **Assigned to**: Katelyna Pastrana, Maxime Hildebrand, & Landon Martin
+- **Responsibilities**: Using a different coding language for all 3 projects.
+- **Assigned to**: Katelyna Pastrana, Landon Martin, Maxime Hildebrand
 
 ## File Listing
-```
-root/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main.c
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ include/
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ README.md
-â””â”€â”€ Makefile
 
-```
+root/
+  src/
+    background_proc.c
+    exec_external.c
+    expand_env.c
+    internal_command_execution.c
+    io_redirection.c
+    lexer.c
+    path_search.c
+    piping.c
+    prompt.c
+    tilde_expansion.c
+  obj/
+    main.c
+  include/
+    lexer.h
+    shell.h
+  bin/
+    shell.o
+  README.md
+  Makefile
+
 ## How to Compile & Execute
 
 ### Requirements
