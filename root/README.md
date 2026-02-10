@@ -6,7 +6,7 @@ Building a shell from scratch
 ## Group Members
 - Maxime Hildebrand: mgh23d@fsu.edu
 - Landon Martin: [School Email]
-- Katelyna Pastrana: [School Email]
+- Katelyna Pastrana: kjp24h@fsu.edu
 ## Division of Labor
 
 ### Part 1: [Description]
