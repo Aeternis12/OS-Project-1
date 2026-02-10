@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <errno.h>
-#include <shell.h>
+#include "shell.h"
 
 // --- GLOBALS AND DEFINITIONS ---
 char* history[HISTORY_DEPTH];
@@ -13,6 +13,7 @@ int history_count = 0;
 // helper to add a command to history
 // call this every time a user enters a valid command
 void add_to_history(char *cmd) {
+    if (!cmd) return;
     // if history is full, remove the oldest one
     if (history_count == HISTORY_DEPTH) {
         free(history[0]);
@@ -31,17 +32,11 @@ void add_to_history(char *cmd) {
 // --- BUILT-IN FUNCTIONS ---
 
 // 1. EXIT COMMAND
-void builtin_exit() {
+void builtin_exit(void) {
     printf("[DEBUG] Exiting shell...\n");
 
-    // wait for any background processes (mock logic for now)
-    for (int i = 0; i < MAX_JOBS; i++) {
-        if (job_table[i].is_active) {
-            printf("Waiting for background job %d (PID %d)...\n", jobs[i].id, jobs[i].pid);
-            waitpid(job_table[i].pid, NULL, 0);
-            job_table[i].is_active = 0;
-        }
-    }
+    /* Use the background-job API to shut down/cleanup instead of touching job internals. */
+    part_eight_shutdown();
 
     // print history
     if (history_count == 0) {
@@ -56,22 +51,6 @@ void builtin_exit() {
 
     exit(0);
 }
-
-// 2. JOBS COMMAND
-//void builtin_jobs() {
-//    int found_any = 0;
-//    for (int i = 0; i < MAX_JOBS; i++) {
-//        if (jobs[i].is_active) {
-//            // format: [Job number]+ [PID] [Command line]
-//            printf("[%d]+ [%d] %s\n", jobs[i].id, jobs[i].pid, jobs[i].command);
-//            found_any = 1;
-//        }
-//    }
-//    
-//    if (!found_any) {
-//        printf("No active background processes.\n");
-//    }
-//}
 
 // 3. CD COMMAND
 // returns 1 if successful, 0 if error (so we know if we should save it to history)

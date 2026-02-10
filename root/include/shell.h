@@ -14,7 +14,9 @@
 #include "lexer.h"
 
 //CONSTANTS
-#define MAX_JOBS 10
+#define MAX_ACTIVE_JOBS 10
+#define MAX_JOB_HISTORY 1024 /* capacity for job records (job numbers monotonic) */
+#define MAX_PROCS_PER_JOB 3  /* supports up to 3 commands per job (2 pipes => 3 procs) */
 #define HISTORY_DEPTH 3
 
 

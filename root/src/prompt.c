@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <shell.h>
+#include "shell.h"
 
 void print_prompt(void)
 {
@@ -17,6 +17,4 @@ void print_prompt(void)
 
     printf("%s@%s:%s> ", user, hostname, pwd);
     fflush(stdout);
-
-    return 0;
 }
