@@ -1,5 +1,5 @@
 //***************************************************************************
-//* Name: background_prochead                                               *
+//* Name: background_proc.h                                                 *
 //* Description:   Part 8 - Background Processing & Job Bookkeeping header  *
 //* Author: Katelyna Pastrana                                               *
 //* Date:        2026-02-06                                                 *
