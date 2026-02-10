@@ -32,6 +32,7 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <sys/types.h>
+#include <shell.h>
 
 /* Public API (previously in background_proc.h)
  *
@@ -62,15 +63,6 @@ void part_eight_shutdown(void);
 #define MAX_JOB_HISTORY 1024 /* capacity for job records (job numbers monotonic) */
 #define MAX_PROCS_PER_JOB 3  /* supports up to 3 commands per job (2 pipes => 3 procs) */
 
-typedef struct job {
-    int active;                 /* 1 if active, 0 if finished */
-    int jobno;                  /* monotonic job number */
-    pid_t pids[MAX_PROCS_PER_JOB];
-    int nprocs;                 /* number of pids stored */
-    pid_t leader_pid;           /* pid printed at start (last pid in pipeline) */
-    int remaining;              /* how many procs still running */
-    char *cmdline;              /* strdup'd command line for messages */
-} job_t;
 
 /* Job table / bookkeeping state */
 static job_t job_table[MAX_JOB_HISTORY];

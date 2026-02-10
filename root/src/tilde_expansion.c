@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h> 
 #include <stdio.h>
+#include <shell.h>
 
 char* expand_tilde(char* token){
 	if(token[0] != '~'){

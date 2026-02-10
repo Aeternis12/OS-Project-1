@@ -3,6 +3,15 @@
 #ifndef SHELL_H
 #define SHELL_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include "lexer.h"
 
 //CONSTANTS
 #define MAX_JOBS 10
@@ -12,17 +21,19 @@
 
 
 //DATA STRUCTS
-struct Job {
-    int id;
-    int pid;
-    char* command;
-    int is_active;
-};
+typedef struct job {
+    int active;                 /* 1 if active, 0 if finished */
+    int jobno;                  /* monotonic job number */
+    pid_t pids[MAX_PROCS_PER_JOB];
+    int nprocs;                 /* number of pids stored */
+    pid_t leader_pid;           /* pid printed at start (last pid in pipeline) */
+    int remaining;              /* how many procs still running */
+    char* cmdline;              /* strdup'd command line for messages */
+} job_t;
 
 //Global Variables
-extern struct Job jobs[MAX_JOBS];
-extern char* history[HISTORY_DEPTH];
-extern int history_count;
+extern job_t job_table[]; // Defined in background_proc.c
+extern int next_job_index;
 
 
 //------------Function Prototypes----------------\\

@@ -34,6 +34,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 #include <sys/stat.h>
+#include <shell.h>
 
 /* Finds an executable on PATH.
  * If cmd contains a '/', returns strdup(cmd) (no PATH search).

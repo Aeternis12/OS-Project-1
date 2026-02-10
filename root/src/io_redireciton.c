@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <shell.h>
 
 // function to handle the redirection
 // call this in the child process
