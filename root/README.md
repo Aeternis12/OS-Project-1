@@ -16,9 +16,9 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 3: [Description]
+### Part 3: Tilde Expansion
 - **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Assigned to**: Landon Martin
 
 ### Part 4: $Path Search
 - **Responsibilities**: Search $Path for commands and format into usable inputs for piping
@@ -28,9 +28,9 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 6: [Description]
+### Part 6: I/O Redirection
 - **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Assigned to**: Landon Martin
 
 ### Part 7: Piping
 - **Responsibilities**: Implementing piping in order to execute commands simulatneously
@@ -42,7 +42,7 @@ Building a shell from scratch
 
 ### Part 9: Internal Command Execution
 - **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Assigned to**: Landon Martin
 
 ### Extra Credit
 - **Responsibilities**: [Description]
