@@ -14,8 +14,8 @@ Building a shell from scratch
 - **Assigned to**: [Members]
 
 ### Part 2: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Katelyna Pastrana
 
 ### Part 3: [Description]
 - **Responsibilities**: [Description]
@@ -26,8 +26,8 @@ Building a shell from scratch
 - **Assigned to**: [Members]
 
 ### Part 5: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Katelyna Pastrana
 
 ### Part 6: [Description]
 - **Responsibilities**: [Description]
@@ -38,8 +38,8 @@ Building a shell from scratch
 - **Assigned to**: [Members]
 
 ### Part 8: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Katelyna Pastrana
 
 ### Part 9: [Description]
 - **Responsibilities**: [Description]
