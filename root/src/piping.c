@@ -58,7 +58,7 @@ void execute_pipeline(char ***cmds, int num_cmds)
             close(pipe2[1]);
         }
 
-        execute_command(cmds[0][0], cmds[0]);
+        execute_search(cmds[0][0], cmds[0]);
         exit(1);
     }
 
@@ -83,7 +83,7 @@ void execute_pipeline(char ***cmds, int num_cmds)
                 close(pipe2[1]);
             }
 
-            execute_command(cmds[1][0], cmds[1]);
+            execute_search(cmds[1][0], cmds[1]);
             exit(1);
         }
     }
@@ -101,7 +101,7 @@ void execute_pipeline(char ***cmds, int num_cmds)
             close(pipe1[0]);
             close(pipe1[1]);
 
-            execute_command(cmds[2][0], cmds[2]);
+            execute_search(cmds[2][0], cmds[2]);
             exit(1);
         }
     }
