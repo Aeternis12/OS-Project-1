@@ -85,9 +85,9 @@ Each member records their contributions here.
 
 | Date       | Work Completed / Notes     |
 |------------|----------------------------|
-| YYYY-MM-DD | Code for Part 1 of project |
-| YYYY-MM-DD | Code for Part 4 of project |
-| YYYY-MM-DD | Code for Part 7 of project |
+| 2026-01-25 | Code for Part 1 of project |
+| 2026-02-04 | Code for Part 4 of project |
+| 2026-02-08 | Code for Part 7 of project |
 | 2026-02-09 | Remaing bit of project     |
 
 ### Landon Martin
