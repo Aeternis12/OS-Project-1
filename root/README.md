@@ -81,31 +81,32 @@ This will run the program ...
 ## Development Log
 Each member records their contributions here.
 
-### [Member 1]
+### Maxime Hildebrand
 
-| Date       | Work Completed / Notes |
-|------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
+| Date       | Work Completed / Notes     |
+|------------|----------------------------|
+| YYYY-MM-DD | Code for Part 1 of project |
+| YYYY-MM-DD | Code for Part 4 of project |
+| YYYY-MM-DD | Code for Part 7 of project |
+| 2026-02-09 | Remaing bit of project     |
 
-### [Member 2]
+### Landon Martin
 
-| Date       | Work Completed / Notes |
-|------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
+| Date       | Work Completed / Notes     |
+|------------|----------------------------|
+| YYYY-MM-DD | Code for Part 3 of project |
+| YYYY-MM-DD | Code for Part 6 of project |
+| YYYY-MM-DD | Code for Part 9 of project |
+| 2026-02-09 | Remaing bit of project     |
 
+### Katelyna Pastrana
 
-### [Member 3]
-
-| Date       | Work Completed / Notes |
-|------------|------------------------|
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-| YYYY-MM-DD | [Description of task]  |
-
+| Date       | Work Completed / Notes     |
+|------------|----------------------------|
+| 2026-01-24 | Code for Part 2 of project |
+| 2026-02-03 | Code for Part 5 of project |
+| 2026-02-07 | Code for Part 8 of project |
+| 2026-02-09 | Remaing bit of project     |
 
 ## Meetings
 Document in-person meetings, their purpose, and what was discussed.
