@@ -1,5 +1,5 @@
 //**********************************************************************************************************
-//* Name:        exec_external                                                                             *
+//* Name:        exec_external.c                                                                           *
 //* Description: External-command execution utilities for COP4610 Project 1 shell.                         *
 //*              Implements:                                                                               *
 //*                - find_executable(cmd): locate an executable via PATH or accept                         *
@@ -21,7 +21,7 @@
 //*    - COP4610 Project 1 specification (Part 5: External Command Execution)                              *
 //*    - POSIX: fork(2), execv(2), waitpid(2), access(2), stat(2)                                          *
 //*    - Stephen Brennan, "Write a Shell in C" (design notes)                                              *
-//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o exec_external part_five.c *
+//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o exec_external exec_external.c *
 //**********************************************************************************************************
 
 #define _POSIX_C_SOURCE 200809L
