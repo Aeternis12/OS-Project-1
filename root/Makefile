@@ -10,22 +10,22 @@ DIRS := $(OBJ)/ $(BIN)/
 EXEC := $(BIN)/$(EXECUTABLE)
 
 CC := gcc
-CFLAGS := -g -Wall -std=c99 $(INCS)
-LDFLAGS :=
+CFLAGS := -g -Wall -std=c99 $(INCS) -D_POSIX_C_SOURCE=200809L
+# LDFLAGS can be added here if needed (-lpthread)
 
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
+	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC) $(LDFLAGS)
 
-$(OBJ)/%.o: $(SRC)/%.c
+$(OBJ)/%.o: $(SRC)/%.c $(wildcard include/*.h)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 run: $(EXEC)
 	$(EXEC)
 
 clean:
-	rm $(OBJ)/*.o $(EXEC)
+	rm -f $(OBJ)/*.o $(EXEC)
 
 $(shell mkdir -p $(DIRS))
 
