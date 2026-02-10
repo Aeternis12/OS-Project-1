@@ -65,10 +65,10 @@ void part_eight_shutdown(void);
 
 
 /* Job table / bookkeeping state */
-static job_t job_table[MAX_JOB_HISTORY];
-static int next_job_index = 0;   /* next slot to use (keeps history) */
-static int next_job_number = 1;  /* monotonic job number */
-static int active_job_count = 0;
+job_t job_table[MAX_JOB_HISTORY];
+int next_job_index = 0;   /* next slot to use (keeps history) */
+int next_job_number = 1;  /* monotonic job number */
+int active_job_count = 0;
 
 void part_eight_init(void) {
     memset(job_table, 0, sizeof(job_table));
