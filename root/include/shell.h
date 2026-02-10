@@ -40,6 +40,8 @@ void print_prompt(void);
 
 //Tilde Expansion Prototypes
 
+char* expand_tilde(char *token);
+
 
 //$Path Search Prototypes
 
@@ -50,6 +52,8 @@ void execute_command(char *command, char **argv);
 
 //IO Redirection Prototypes
 
+void handle_io_redirection(char **args);
+
 
 //Piping Protypes
 
@@ -59,5 +63,13 @@ void execute_pipeline(char ***cmds, int num_cmds);
 
 
 //Internal Command Execution Prototypes
+
+void add_to_history(char *cmd);
+void builtin_exit(void);
+void builtin_jobs(void);
+int builtin_cd(char **args);
+
+
+#endif // SHELL_H
 
 
