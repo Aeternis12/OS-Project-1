@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <string.h>
 #include "shell.h"
 
 /*
@@ -13,6 +14,13 @@
  */
 void execute_search(char *command, char **argv);
 
+int last_is_background(char **argv) {
+    if (argv == NULL) return 0;
+    int i = 0;
+    while (argv[i] != NULL) i++; // find NULL
+    if (i == 0) return 0;
+    return (strcmp(argv[i-1], "&") == 0);
+}
 /*
  * Execute:
  *   cmd1 | cmd2
@@ -22,6 +30,13 @@ void execute_pipeline(char ***cmds, int num_cmds)
 {
     int pipe1[2], pipe2[2];
     pid_t pid;
+    int last_bg = last_is_background(cmds[num_cmds-1]);
+    
+    if (last_bg) {
+        int i = 0;
+        while (cmds[num_cmds-1][i] != NULL) i++;
+        cmds[num_cmds-1][i-1] = NULL;
+    }
 
     if (num_cmds >= 2) 
     {
@@ -119,9 +134,10 @@ void execute_pipeline(char ***cmds, int num_cmds)
         close(pipe2[1]);
     }
 
-    // wait for all children
-    for (int i = 0; i < num_cmds; i++) 
+    // wait for all children except background
+     for (int i = 0; i < num_cmds; i++) 
     {
+        if (i == num_cmds - 1 && last_bg) continue; // skip wait
         wait(NULL);
     }
 }
