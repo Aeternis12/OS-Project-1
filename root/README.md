@@ -8,9 +8,9 @@ Building a shell from scratch
 - Katelyna Pastrana: kjp24h@fsu.edu
 ## Division of Labor
 
-### Part 1: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 1: Prompt
+- **Responsibilities**: Formatting prompt to be displayed by shell
+- **Assigned to**: Maxime Hildebrand
 
 ### Part 2: Environment Variables
 - **Responsibilities**: Coding and ensuring it follows the guidelines
@@ -20,9 +20,9 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
-### Part 4: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 4: $Path Search
+- **Responsibilities**: Search $Path for commands and format into usable inputs for piping
+- **Assigned to**: Maxime Hildebrand
 
 ### Part 5: External Command Execution
 - **Responsibilities**: Coding and ensuring it follows the guidelines
@@ -32,9 +32,9 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
-### Part 7: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 7: Piping
+- **Responsibilities**: Implementing piping in order to execute commands simulatneously
+- **Assigned to**: Maxime Hildebrand
 
 ### Part 8: Background Processing
 - **Responsibilities**: Coding and ensuring it follows the guidelines
