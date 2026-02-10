@@ -128,9 +128,7 @@ Document in-person meetings, their purpose, and what was discussed.
 - **Bug 3**: This is bug 3.
 
 ## Extra Credit
-- **Extra Credit 1:**: [Extra Credit Option]
-- **Extra Credit 2:**: [Extra Credit Option]
-- **Extra Credit 3:**: [Extra Credit Option]
+- **Extra Credit 1:**: Using C as the programing language for this project and not the future two.
 
 ## Considerations
 [Description]
