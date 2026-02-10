@@ -59,7 +59,7 @@ char* expand_tilde(char *token);
 
 //$Path Search Prototypes
 
-void execute_command(char *command, char **argv);
+void execute_search(char *command, char **argv);
 
 //External Command Execution Prototypes
 

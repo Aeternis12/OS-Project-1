@@ -6,7 +6,7 @@
 
 #define MAX_PATH_LEN 1024
 
-void execute_command(char *command, char **argv)
+void execute_search(char *command, char **argv)
 {
     char *path_env = getenv("PATH");
     char *path_copy;
