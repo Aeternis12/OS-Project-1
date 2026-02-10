@@ -40,7 +40,7 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 9: [Description]
+### Part 9: Internal Command Execution
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
