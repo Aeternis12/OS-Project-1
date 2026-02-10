@@ -114,7 +114,7 @@ static void process_command(tokenlist *tokens) {
         char *cmdline = join_argv(dup_argv);
         if (cmdline) add_to_history(cmdline);
         part_eight_shutdown();
-        exit(0);
+        builtin_exit();
     } else if (strcmp(dup_argv[0], "cd") == 0) {
         if (builtin_cd(dup_argv)) {
             char *cmdline = join_argv(dup_argv);
