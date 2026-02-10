@@ -94,9 +94,9 @@ Each member records their contributions here.
 
 | Date       | Work Completed / Notes     |
 |------------|----------------------------|
-| 2026-MM-DD | Code for Part 3 of project |
-| 2026-MM-DD | Code for Part 6 of project |
-| 2026-MM-DD | Code for Part 9 of project |
+| 2026-02-06 | Code for Part 3 of project |
+| 2026-02-09 | Code for Part 6 of project |
+| 2026-02-09 | Code for Part 9 of project |
 | 2026-02-09 | Remaing bit of project     |
 
 ### Katelyna Pastrana
@@ -123,7 +123,7 @@ Document in-person meetings, their purpose, and what was discussed.
 
 
 ## Bugs
-- **Bug 1**: This is bug 1.
+- **Bug 1**: Issues with compiling, that were solved.
 - **Bug 2**: This is bug 2.
 - **Bug 3**: This is bug 3.
 
