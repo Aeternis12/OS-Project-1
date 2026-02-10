@@ -17,7 +17,7 @@ Building a shell from scratch
 - **Assigned to**: Katelyna Pastrana
 
 ### Part 3: Tilde Expansion
-- **Responsibilities**: [Description]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Landon Martin
 
 ### Part 4: $Path Search
@@ -29,7 +29,7 @@ Building a shell from scratch
 - **Assigned to**: Katelyna Pastrana
 
 ### Part 6: I/O Redirection
-- **Responsibilities**: [Description]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Landon Martin
 
 ### Part 7: Piping
@@ -41,7 +41,7 @@ Building a shell from scratch
 - **Assigned to**: Katelyna Pastrana
 
 ### Part 9: Internal Command Execution
-- **Responsibilities**: [Description]
+- **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Landon Martin
 
 ### Extra Credit
@@ -94,9 +94,9 @@ Each member records their contributions here.
 
 | Date       | Work Completed / Notes     |
 |------------|----------------------------|
-| YYYY-MM-DD | Code for Part 3 of project |
-| YYYY-MM-DD | Code for Part 6 of project |
-| YYYY-MM-DD | Code for Part 9 of project |
+| 2026-MM-DD | Code for Part 3 of project |
+| 2026-MM-DD | Code for Part 6 of project |
+| 2026-MM-DD | Code for Part 9 of project |
 | 2026-02-09 | Remaing bit of project     |
 
 ### Katelyna Pastrana
