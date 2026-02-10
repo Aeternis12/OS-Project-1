@@ -45,8 +45,8 @@ Building a shell from scratch
 - **Assigned to**: Landon Martin
 
 ### Extra Credit
-- **Responsibilities**: [Description]
-- **Assigned to**: Katelyna Pastrana, 
+- **Responsibilities**: Writting each project in a different programing language.
+- **Assigned to**: Katelyna Pastrana, Maxime Hildebrand, & Landon Martin
 
 ## File Listing
 ```
