@@ -16,9 +16,9 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 3: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 3: Tilde Expansion
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Landon Martin
 
 ### Part 4: $Path Search
 - **Responsibilities**: Search $Path for commands and format into usable inputs for piping
@@ -28,9 +28,9 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 6: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 6: I/O Redirection
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Landon Martin
 
 ### Part 7: Piping
 - **Responsibilities**: Implementing piping in order to execute commands simulatneously
@@ -40,9 +40,9 @@ Building a shell from scratch
 - **Responsibilities**: Coding and ensuring it follows the guidelines
 - **Assigned to**: Katelyna Pastrana
 
-### Part 9: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 9: Internal Command Execution
+- **Responsibilities**: Coding and ensuring it follows the guidelines
+- **Assigned to**: Landon Martin
 
 ### Extra Credit
 - **Responsibilities**: Using a different coding language for all 3 projects.
@@ -106,9 +106,9 @@ Each member records their contributions here.
 
 | Date       | Work Completed / Notes     |
 |------------|----------------------------|
-| YYYY-MM-DD | Code for Part 3 of project |
-| YYYY-MM-DD | Code for Part 6 of project |
-| YYYY-MM-DD | Code for Part 9 of project |
+| 2026-02-06 | Code for Part 3 of project |
+| 2026-02-09 | Code for Part 6 of project |
+| 2026-02-09 | Code for Part 9 of project |
 | 2026-02-09 | Remaing bit of project     |
 
 ### Katelyna Pastrana
@@ -135,14 +135,12 @@ Document in-person meetings, their purpose, and what was discussed.
 
 
 ## Bugs
-- **Bug 1**: This is bug 1.
+- **Bug 1**: Issues with compiling, that were solved.
 - **Bug 2**: This is bug 2.
 - **Bug 3**: This is bug 3.
 
 ## Extra Credit
-- **Extra Credit 1:**: [Extra Credit Option]
-- **Extra Credit 2:**: [Extra Credit Option]
-- **Extra Credit 3:**: [Extra Credit Option]
+- **Extra Credit 1:**: Using C as the programing language for this project and not the future two.
 
 ## Considerations
 [Description]
