@@ -26,12 +26,37 @@
 
 #define _POSIX_C_SOURCE 200809L
 
-#include "background_proc.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
 #include <errno.h>
+#include <sys/types.h>
+
+/* Public API (previously in background_proc.h)
+ *
+ * Initialize job system (call once at shell startup)
+ * void part_eight_init(void);
+ *
+ * Add a background job:
+ * int part_eight_add_job(const char *cmdline, pid_t *pids, int nprocs, pid_t leader_pid);
+ *
+ * Should be called periodically in the main loop to reap finished background processes:
+ * void part_eight_check_jobs(void);
+ *
+ * Built-in 'jobs' command:
+ * void part_eight_jobs_builtin(void);
+ *
+ * Shutdown job system (free resources):
+ * void part_eight_shutdown(void);
+ */
+
+/* Function prototypes (kept non-static so other compilation units can link) */
+void part_eight_init(void);
+int part_eight_add_job(const char *cmdline, pid_t *pids, int nprocs, pid_t leader_pid);
+void part_eight_check_jobs(void);
+void part_eight_jobs_builtin(void);
+void part_eight_shutdown(void);
 
 #define MAX_ACTIVE_JOBS 10
 #define MAX_JOB_HISTORY 1024 /* capacity for job records (job numbers monotonic) */
