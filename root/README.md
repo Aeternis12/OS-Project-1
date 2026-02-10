@@ -17,6 +17,34 @@ Building a shell from scratch
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
 
+### Part 3: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 4: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 5: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 6: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 7: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 8: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
+### Part 9: [Description]
+- **Responsibilities**: [Description]
+- **Assigned to**: [Members]
+
 ### Extra Credit
 - **Responsibilities**: [Description]
 - **Assigned to**: [Members]
