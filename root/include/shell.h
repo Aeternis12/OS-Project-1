@@ -87,7 +87,6 @@ void part_eight_shutdown(void);
 
 void add_to_history(char *cmd);
 void builtin_exit(void);
-void builtin_jobs(void);
 int builtin_cd(char **args);
 
 
