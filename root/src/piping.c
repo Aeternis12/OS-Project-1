@@ -11,7 +11,7 @@
  *
  * num_cmds: 2 or 3
  */
-void execute_command(char *command, char **argv);
+void execute_search(char *command, char **argv);
 
 /*
  * Execute:
