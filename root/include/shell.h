@@ -37,6 +37,9 @@ void print_prompt(void);
 
 //Environment Variable Prototypes
 
+void free_argv(char **argv);
+char **expand_env_vars_dup(char **argv);
+int expand_env_vars_inplace(char **argv);
 
 //Tilde Expansion Prototypes
 
@@ -49,6 +52,8 @@ void execute_command(char *command, char **argv);
 
 //External Command Execution Prototypes
 
+char *find_executable(const char *cmd);
+pid_t execute_command(char **argv, char *fullpath, int background);
 
 //IO Redirection Prototypes
 
@@ -61,6 +66,11 @@ void execute_pipeline(char ***cmds, int num_cmds);
 
 //Background Processing Prototypes
 
+void part_eight_init(void);
+int part_eight_add_job(const char *cmdline, pid_t *pids, int nprocs, pid_t leader_pid);
+void part_eight_check_jobs(void);
+void part_eight_jobs_builtin(void);
+void part_eight_shutdown(void);
 
 //Internal Command Execution Prototypes
 
