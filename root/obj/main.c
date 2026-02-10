@@ -10,8 +10,6 @@ int main(void) {
 
     tokenlist *tokens = get_tokens(input);
     if (!tokens || tokens->size == 0) {
-        free(input);
-        free_tokens(tokens);
-        continue;
+        
     }
 }
