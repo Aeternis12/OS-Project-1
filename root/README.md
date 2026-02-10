@@ -110,10 +110,13 @@ Each member records their contributions here.
 ## Meetings
 Document in-person meetings, their purpose, and what was discussed.
 
-| Date       | Attendees            | Topics Discussed | Outcomes / Decisions |
-|------------|----------------------|------------------|-----------------------|
-| YYYY-MM-DD | [Names]              | [Agenda items]   | [Actions/Next steps]  |
-| YYYY-MM-DD | [Names]              | [Agenda items]   | [Actions/Next steps]  |
+| Date       | Attendees                                             | Topics Discussed                                       | Outcomes / Decisions                                                                  |
+|------------|-------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------|
+| 2026-01-20 | Katelyna Pastrana, Maxime Hildebrand, & Landon Martin | Workload split and future meeting times.               | Three parts per person with somewhat random distribtion and W F meetings at 9:30 AM.  |
+| 2026-01-23 | Katelyna Pastrana, Maxime Hildebrand, & Landon Martin | Timelines, restrictions, and future meeting locations. | Sunday due dates, 3 parts per due date, and discord for future meetings.              |
+| 2026-01-28 | Katelyna Pastrana, Maxime Hildebrand, & Landon Martin | Check in and possible single meeting date move.        | 2026-01-30 meeting moved to 2026-01-29.                                               |
+| 2026-01-29 | Katelyna Pastrana, Maxime Hildebrand, & Landon Martin | Check in and looking into how it comes together.       | Decide that focus would be on completing parts and then addtional meetings for merge. |
+| 2026-02-04 | Katelyna Pastrana, Maxime Hildebrand, & Landon Martin | [Agenda items]   | [Actions/Next steps]  |
 
 
 ## Bugs
