@@ -1,5 +1,5 @@
 //******************************************************************************************************
-//* Name:        expand_env                                                                            *
+//* Name:        expand_env.c                                                                          *
 //* Description: Environment-variable expansion utilities for COP4610 Project 1 shell.                 *
 //*              Provides two APIs:                                                                    *
 //*                - expand_env_vars_dup(char **argv): non-destructive, returns newly                  *
@@ -19,7 +19,7 @@
 //*    - Stephen Brennan, "Write a Shell in C" (guidance on where to call expansion)                   *
 //*    - POSIX environment-variable naming conventions                                                 *
 //*    - CodeVault YouTube videos                                                                      *
-//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o expand_env part_two.c     *
+//* Compile:     gcc -std=c11 -Wall -Wextra -O2 -D_POSIX_C_SOURCE=200809L -o expand_env expand_env.c   *
 //* Note:        strdup is POSIX; if compiling on a non-POSIX system, provide an                       *
 //*              implementation or replace with malloc+strcpy.                                         *
 //******************************************************************************************************
