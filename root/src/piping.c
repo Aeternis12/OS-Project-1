@@ -137,7 +137,7 @@ void execute_pipeline(char ***cmds, int num_cmds)
     // wait for all children except background
      for (int i = 0; i < num_cmds; i++) 
     {
-        if (i == num_cmds - 1 && last_bg) continue; // skip wait
+        if (i == num_cmds - 1 && last_bg) continue;
         wait(NULL);
     }
 }
