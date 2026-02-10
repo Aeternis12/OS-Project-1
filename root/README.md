@@ -136,7 +136,7 @@ Document in-person meetings, their purpose, and what was discussed.
 
 ## Bugs
 - **Bug 1**: Issues with compiling, that were solved.
-- **Bug 2**: This is bug 2.
+- **Bug 2**: Naming issues, also resloved.
 - **Bug 3**: This is bug 3.
 
 ## Extra Credit
