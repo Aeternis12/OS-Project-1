@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int main(void)
+void print_prompt(void)
 {
     char hostname[256];
     char *user = getenv("USER");
