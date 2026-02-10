@@ -11,7 +11,7 @@ EXEC := $(BIN)/$(EXECUTABLE)
 
 CC := gcc
 CFLAGS := -g -Wall -std=c99 $(INCS) -D_POSIX_C_SOURCE=200809L
-LDFLAGS :=
+# LDFLAGS can be added here if needed (-lpthread)
 
 all: $(EXEC)
 
