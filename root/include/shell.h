@@ -33,6 +33,7 @@ extern int history_count;
 
 //Prompt Prototypes
 
+void print_prompt(void);
 
 //Environment Variable Prototypes
 
@@ -42,6 +43,7 @@ extern int history_count;
 
 //$Path Search Prototypes
 
+void execute_command(char *command, char **argv);
 
 //External Command Execution Prototypes
 
@@ -51,6 +53,7 @@ extern int history_count;
 
 //Piping Protypes
 
+void execute_pipeline(char ***cmds, int num_cmds);
 
 //Background Processing Prototypes
 
