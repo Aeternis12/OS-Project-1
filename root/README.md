@@ -1,6 +1,5 @@
 # Shell
 
-[Description]
 Building a shell from scratch
 
 ## Group Members
@@ -47,7 +46,7 @@ Building a shell from scratch
 
 ### Extra Credit
 - **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+- **Assigned to**: Katelyna Pastrana, 
 
 ## File Listing
 ```
