@@ -154,6 +154,8 @@ pid_t execute_command(char **argv, char *fullpath, int background) {
         signal(SIGQUIT, SIG_DFL);
         signal(SIGTSTP, SIG_DFL);
 
+		handle_io_redirection((char**)argv);
+
         /* Execute program. execv only, per project restrictions. */
         execv(path_to_exec, (char *const *)argv);
 
