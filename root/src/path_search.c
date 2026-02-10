@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <shell.h>
+#include "shell.h"
 
 #define MAX_PATH_LEN 1024
 

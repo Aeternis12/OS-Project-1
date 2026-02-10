@@ -32,7 +32,7 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <sys/types.h>
-#include <shell.h>
+#include "shell.h"
 
 /* Public API (previously in background_proc.h)
  *

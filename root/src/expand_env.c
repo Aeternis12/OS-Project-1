@@ -28,7 +28,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <shell.h>
+#include "shell.h"
 
 /* Validate environment variable NAME according to POSIX-like rules:
  *  - Non-empty
