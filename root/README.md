@@ -75,20 +75,18 @@ root/
 ## How to Compile & Execute
 
 ### Requirements
-- **Compiler**: e.g., `gcc` for C/C++, `rustc` for Rust.
-- **Dependencies**: List any libraries or frameworks necessary (rust only).
+- **Compiler**: `gcc` for C
 
 ### Compilation
-For a C/C++ example:
-```bash
+
 make
-```
-This will build the executable in ...
+
+This will build the executable in root/bin.
 ### Execution
-```bash
+
 make run
-```
-This will run the program ...
+
+This will run the program called shell.
 
 ## Development Log
 Each member records their contributions here.
@@ -137,10 +135,10 @@ Document in-person meetings, their purpose, and what was discussed.
 ## Bugs
 - **Bug 1**: Issues with compiling, that were solved.
 - **Bug 2**: Naming issues, also resloved.
-- **Bug 3**: This is bug 3.
+- **Bug 3**: Piping working with other parts.
 
 ## Extra Credit
 - **Extra Credit 1:**: Using C as the programing language for this project and not the future two.
 
 ## Considerations
-[Description]
+None
