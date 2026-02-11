@@ -68,7 +68,6 @@ void handle_io_redirection(char **args) {
         close(fd1);
     }
 
-    // clean up args array: remove redirection tokens so execv sees only real args
     if (!args) return;
     int j = 0;
     i = 0;

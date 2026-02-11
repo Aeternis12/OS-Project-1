@@ -12,44 +12,44 @@
  *
  * num_cmds: 2 or 3
  */
-void execute_search(char *command, char **argv);
+void execute_search(char* command, char** argv);
 
-int last_is_background(char **argv) {
+int last_is_background(char** argv) {
     if (argv == NULL) return 0;
     int i = 0;
     while (argv[i] != NULL) i++; // find NULL
     if (i == 0) return 0;
-    return (strcmp(argv[i-1], "&") == 0);
+    return (strcmp(argv[i - 1], "&") == 0);
 }
 /*
  * Execute:
  *   cmd1 | cmd2
  *   cmd1 | cmd2 | cmd3
  */
-void execute_pipeline(char ***cmds, int num_cmds) 
+void execute_pipeline(char*** cmds, int num_cmds)
 {
     int pipe1[2], pipe2[2];
-    pid_t pid;
-    int last_bg = last_is_background(cmds[num_cmds-1]);
-    
+    pid_t pids[MAX_PROCS_PER_JOB];
+    int last_bg = last_is_background(cmds[num_cmds - 1]);
+
     if (last_bg) {
         int i = 0;
-        while (cmds[num_cmds-1][i] != NULL) i++;
-        cmds[num_cmds-1][i-1] = NULL;
+        while (cmds[num_cmds - 1][i] != NULL) i++;
+        cmds[num_cmds - 1][i - 1] = NULL;
     }
 
-    if (num_cmds >= 2) 
+    if (num_cmds >= 2)
     {
-        if (pipe(pipe1) == -1) 
+        if (pipe(pipe1) == -1)
         {
             perror("pipe");
             return;
         }
     }
 
-    if (num_cmds == 3) 
+    if (num_cmds == 3)
     {
-        if (pipe(pipe2) == -1) 
+        if (pipe(pipe2) == -1)
         {
             perror("pipe");
             return;
@@ -57,17 +57,17 @@ void execute_pipeline(char ***cmds, int num_cmds)
     }
 
     // CMD 1
-    pid = fork();
-    if (pid == 0) 
+    pids[0] = fork();
+    if (pids[0] == 0)
     {
-        if (num_cmds >= 2) 
+        if (num_cmds >= 2)
         {
             dup2(pipe1[1], STDOUT_FILENO);
         }
 
         close(pipe1[0]);
         close(pipe1[1]);
-        if (num_cmds == 3) 
+        if (num_cmds == 3)
         {
             close(pipe2[0]);
             close(pipe2[1]);
@@ -78,21 +78,21 @@ void execute_pipeline(char ***cmds, int num_cmds)
     }
 
     // CMD 2
-    if (num_cmds >= 2) 
+    if (num_cmds >= 2)
     {
-        pid = fork();
-        if (pid == 0) 
+        pids[1] = fork();
+        if (pids[1] == 0)
         {
             dup2(pipe1[0], STDIN_FILENO);
 
-            if (num_cmds == 3) 
+            if (num_cmds == 3)
             {
                 dup2(pipe2[1], STDOUT_FILENO);
             }
 
             close(pipe1[0]);
             close(pipe1[1]);
-            if (num_cmds == 3) 
+            if (num_cmds == 3)
             {
                 close(pipe2[0]);
                 close(pipe2[1]);
@@ -104,10 +104,10 @@ void execute_pipeline(char ***cmds, int num_cmds)
     }
 
     // CMD 3
-    if (num_cmds == 3) 
+    if (num_cmds == 3)
     {
-        pid = fork();
-        if (pid == 0)
+        pids[2] = fork();
+        if (pids[2] == 0)
         {
             dup2(pipe2[0], STDIN_FILENO);
 
@@ -123,21 +123,28 @@ void execute_pipeline(char ***cmds, int num_cmds)
 
     //parent
 
-    if (num_cmds >= 2) 
+    if (num_cmds >= 2)
     {
         close(pipe1[0]);
         close(pipe1[1]);
     }
-    if (num_cmds == 3) 
+    if (num_cmds == 3)
     {
         close(pipe2[0]);
         close(pipe2[1]);
     }
 
-    // wait for all children except background
-     for (int i = 0; i < num_cmds; i++) 
+    if (last_bg)
     {
-        if (i == num_cmds - 1 && last_bg) continue;
-        wait(NULL);
+        //background process
+        part_eight_add_job("Pipeline Job", pids, num_cmds, pids[0]);
+    }
+    else
+    {
+        //wait for children
+        for (int i = 0; i < num_cmds; i++)
+        {
+            waitpid(pids[i], NULL, 0);
+        }
     }
 }
